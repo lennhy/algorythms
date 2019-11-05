@@ -1,43 +1,43 @@
 #!/usr/bin/env node
 "use strict";
 
-var str = "LiserMin";
-var stringArr = 'ggefwwgpiii';
-var sen = "there is a dog in the backyard";
-var i=0;
-var arr=[];
-var arry = [1,2,4,5,6, 44, 9,10, 45];
-var num = 6;
-var vowelText = "This is a Atest";
-const matrixArr =[
-  [11, 2, 4],
-  [4, 5, 6],
-  [10, 8, -12]
-]
+// var str = "LiserMin";
+// var stringArr = 'ggefwwgpiii';
+// var sen = "there is a dog in the backyard";
+// var i=0;
+// var arr=[];
+// var arry = [1,2,4,5,6, 44, 9,10, 45];
+// var num = 6;
+// var vowelText = "This is a Atest";
+// const matrixArr =[
+//   [11, 2, 4],
+//   [4, 5, 6],
+//   [10, 8, -12]
+// ]
 
 //========================= TREE VALUES
-var arr = [23, 231, 9, 22, 92, 190, 10, 11, 12]
-
-const node = new Node(2);
-node.add(17);
-node.add(23);
-node.add(16);
-node.add(90);
-const tree = new Tree();
-tree.root = node;
-tree.traverseBreadthFirst();
+// var arr = [23, 231, 9, 22, 92, 190, 10, 11, 12]
+//
+// const node = new Node(2);
+// node.add(17);
+// node.add(23);
+// node.add(16);
+// node.add(90);
+// const tree = new Tree();
+// tree.root = node;
+// tree.traverseBreadthFirst();
 
 // ========================== END OF TREE VALUES
 
 // nxnSpiralMatrix(4)
-console.log("No 1 -------------------------")
-console.log(hasNoDuplicates(str));
-console.log("No 2 -------------------------")
-console.log(IsApermutation("bedwsq", "dwsqbe"));
-console.log("No 3 -------------------------")
-console.log(arrayChunk(arry, 6))
-console.log("No 4 -------------------------")
-console.log(urlify("hell no jose", 0))
+// console.log("No 1 -------------------------")
+// console.log(hasNoDuplicates(str));
+// console.log("No 2 -------------------------")
+// console.log(IsApermutation("bedwsq", "dwsqbe"));
+// console.log("No 3 -------------------------")
+// console.log(arrayChunk(arry, 6))
+// console.log("No 4 -------------------------")
+// console.log(urlify("hell no jose", 0))
 // console.log("No 4 -------------------------")
 // palindromePermutation("fal", "laf");
 // console.log("No 5 -------------------------")
@@ -53,12 +53,12 @@ console.log(urlify("hell no jose", 0))
 // console.log("No 10 -------------------------")
 // stepPyramid(3);
 
-console.log("No 12 -------------------------")
-console.log("Node "+ node);
-console.log("No 13 -------------------------")
-console.log("Tree "+ tree);
-console.log("No 14 -------------------------")
-console.log("Tree after traverse "+ JSON.stringify(tree))
+// console.log("No 12 -------------------------")
+// console.log("Node "+ node);
+// console.log("No 13 -------------------------")
+// console.log("Tree "+ tree);
+// console.log("No 14 -------------------------")
+// console.log("Tree after traverse "+ JSON.stringify(tree))
 
 
 // No. 1
@@ -77,23 +77,23 @@ console.log("Tree after traverse "+ JSON.stringify(tree))
 // // Refactor
 // // 1 O(A+B)
 // No. 1
-function hasNoDuplicates(str){
-  var chars={};
-  for(let i=0;i< str.length; i++){
-    if(chars[str[i]]){
-      chars[str[i]]++;
-    }
-    else{
-      chars[str[i]] = 1;
-    }
-  }
-  for(let char in chars){
-    if(chars[char] > 1){
-      return "there are duplicates";
-    }
-  }
-  return "there are no duplicates";
-}
+// function hasNoDuplicates(str){
+//   var chars={};
+//   for(let i=0;i< str.length; i++){
+//     if(chars[str[i]]){
+//       chars[str[i]]++;
+//     }
+//     else{
+//       chars[str[i]] = 1;
+//     }
+//   }
+//   for(let char in chars){
+//     if(chars[char] > 1){
+//       return "there are duplicates";
+//     }
+//   }
+//   return "there are no duplicates";
+// }
 
 // check first if they have the same number of letters first before starting the calculation
 //   if(string1.length == string2.length){
@@ -121,51 +121,51 @@ function hasNoDuplicates(str){
 // Refactor
 // // 2. O(A+B)
 // No. 2
-function IsApermutation(string1, string2){
-  var chars={};
-  var chars2={};
-
-  for(let i=0;i< string1.length; i++){
-    if(chars[string1[i]]){
-      chars[string1[i]]++;
-    }else{
-      chars[string1[i]] = 1;
-    }
-  }
-
-  for(let i=0;i< string2.length; i++){
-    if(chars2[string2[i]]){
-      chars2[string2[i]]++;
-    }else{
-      chars2[string2[i]] = 1;
-    }
-  }
-
-  for(let j in chars){
-    if(chars[j] !== chars2[j]){
-      return "False - it is not a permutation!";
-    }
-  }
-  return "True - It is a permutation!"
-}
-
-// No. 3
-function arrayChunk(arr, val){
-  let newArray=[];
-  let nestedArray=[];
-  for(let i =0; i < arr.length; i++){
-    newArray.push(arr[i])
-    if(i === arr.length -1){
-      nestedArray.push(newArray)
-      return nestedArray;
-    }
-    if(newArray.length === val){
-      nestedArray.push(newArray)
-      newArray = new Array();
-    }
-  }
-  return nestedArray;
-}
+// function IsApermutation(string1, string2){
+//   var chars={};
+//   var chars2={};
+//
+//   for(let i=0;i< string1.length; i++){
+//     if(chars[string1[i]]){
+//       chars[string1[i]]++;
+//     }else{
+//       chars[string1[i]] = 1;
+//     }
+//   }
+//
+//   for(let i=0;i< string2.length; i++){
+//     if(chars2[string2[i]]){
+//       chars2[string2[i]]++;
+//     }else{
+//       chars2[string2[i]] = 1;
+//     }
+//   }
+//
+//   for(let j in chars){
+//     if(chars[j] !== chars2[j]){
+//       return "False - it is not a permutation!";
+//     }
+//   }
+//   return "True - It is a permutation!"
+// }
+//
+// // No. 3
+// function arrayChunk(arr, val){
+//   let newArray=[];
+//   let nestedArray=[];
+//   for(let i =0; i < arr.length; i++){
+//     newArray.push(arr[i])
+//     if(i === arr.length -1){
+//       nestedArray.push(newArray)
+//       return nestedArray;
+//     }
+//     if(newArray.length === val){
+//       nestedArray.push(newArray)
+//       newArray = new Array();
+//     }
+//   }
+//   return nestedArray;
+// }
 
 // No. 3
 // 2. refactor
@@ -196,20 +196,20 @@ function arrayChunk(arr, val){
 
 // O(N)
 // No. 4
-function urlify(string){
-  //recursion
-  while(i < string.length){
-    // if a " " is found
-    if(string[i] === " "){
-       arr.push("%20");
-     }else{
-       arr.push(string[i]);
-    }
-    i++;
-    return urlify(string);
-  }
-  return arr.join('');
-}
+// function urlify(string){
+//   //recursion
+//   while(i < string.length){
+//     // if a " " is found
+//     if(string[i] === " "){
+//        arr.push("%20");
+//      }else{
+//        arr.push(string[i]);
+//     }
+//     i++;
+//     return urlify(string);
+//   }
+//   return arr.join('');
+// }
 //
 //
 //
@@ -491,30 +491,30 @@ function urlify(string){
 // // sourceOne.add([99,3,511,0]);
 //
 //
-// // LinkedList.prototype.push = function(val){
-// //     var node = {
-// //        value: val,
-// //        next: null
-// //     }
-// //     console.log(node)
-// //     if(!this.head){
-// //       this.head = node;
-// //     }
-// //     else{
-// //       current = this.head;
-// //       while(current.next){
-// //         current = current.next;
-// //       }
-// //       current.next = node;
-// //     }
-// //   }
-// //   var sll = new LinkedList();
+// LinkedList.prototype.push = function(val){
+//     var node = {
+//        value: val,
+//        next: null
+//     }
+//     console.log(node)
+//     if(!this.head){
+//       this.head = node;
+//     }
+//     else{
+//       current = this.head;
+//       while(current.next){
+//         current = current.next;
+//       }
+//       current.next = node;
+//     }
+//   }
+//   var sll = new LinkedList();
 //
-//   //push node
-//   // sll.push(2);
-//   // sll.push(3);
-//   // sll.push(4);
-//   // console.log(sll.head);
+//   // push node
+//   sll.push(2);
+//   sll.push(3);
+//   sll.push(4);
+//   console.log(sll.head);
 //
 // // START OF LINKED LIST
 // class Node{
@@ -741,38 +741,38 @@ function urlify(string){
 // // }
 //
 // Arrow function
-const incrementBy10 = (node) =>  node.data+=300;
+// const incrementBy10 = (node) =>  node.data+=300;
+// //
+// //
+// class Tree {
+//   constructor() {
+//     this.root = null;
+// }
 //
+//   traverseBreadthFirst(){
+//     const arr = [this.root]; // put the root node in the array
 //
-class Tree {
-  constructor() {
-    this.root = null;
-}
-
-  traverseBreadthFirst(){
-    const arr = [this.root]; // put the root node in the array
-
-    while(arr.length){ // As long as there is a value in the array run the code below
-      const node = arr.shift(); // Take out the very first element You don't want a nested array only the indivdual child node elments
-      for(let child of node.children){ // Retrieve all of node's children
-        arr.push(child) // push all those children into the end of the array
-        incrementBy10(child)
-      }
-    }
-
-  }
-
-  traverseDepthFirst(){
-    const arr = [this.root]; // put the root node in the array
-    while(arr.length){ // As long as there is a value in the array run the code below
-      const node = arr.shift();
-      for(let child of node.children){
-        arr.unshift(child) // add to the start of the array
-        incrementBy10(child)
-      }
-    }
-  }
-}
+//     while(arr.length){ // As long as there is a value in the array run the code below
+//       const node = arr.shift(); // Take out the very first element You don't want a nested array only the indivdual child node elments
+//       for(let child of node.children){ // Retrieve all of node's children
+//         arr.push(child) // push all those children into the end of the array
+//         incrementBy10(child)
+//       }
+//     }
+//
+//   }
+//
+//   traverseDepthFirst(){
+//     const arr = [this.root]; // put the root node in the array
+//     while(arr.length){ // As long as there is a value in the array run the code below
+//       const node = arr.shift();
+//       for(let child of node.children){
+//         arr.unshift(child) // add to the start of the array
+//         incrementBy10(child)
+//       }
+//     }
+//   }
+// }
 // // End of Tree
 
 
@@ -853,4 +853,107 @@ class Tree {
 //
 //     }
 //   }
+// }
+
+// PART 2 FROM Javascript Algos and Strucs masterclass
+// LINKED LISTS 2
+// class Node{
+//     constructor(val){
+//         this.val = val;
+//         this.next = null
+//     }
+// }
+//
+// class SinglyLinkedList{
+//     constructor(){
+//
+//     }
+// }
+// let array = [22, 120, 80, 20, 19, 8, 122]
+
+
+// loop through array
+// 1st value compare with next,
+// if value is lower swap
+// continue until reach end
+
+function bubbleSort(array){ // less efficient
+  let temp=0
+  for(let j=0; j < array.length; j++ ){
+    for(let i=0; i < array.length-1; i++){
+      temp = array[j]
+      if(array[j] < array[i]){
+        array[j] = array[i]
+        array[i] = temp
+      }
+    }
+  }
+  console.log(array)
+  return array;
+}
+
+function bubbleSort2(array){ // Refactored and More efficient
+  let j = array.length-1
+  while(j >= 0){
+    console.log("One pass complete")
+    for(let i=0; i < j-1; i++){
+      console.log(array[i], array[i+1])
+      console.log(array)
+      let temp = array[i]
+      if(array[i] > array[i+1]){
+        array[i] = array[i+1]
+        array[i+1] = temp
+      }
+    }
+    j--
+  }
+  console.log(array)
+  return array;
+}
+
+// bubbleSort2(array)
+
+function selectionSort(array){
+  let min; // = 22
+  var swapPosition;
+  for(let j=0; j < array.length; j++){
+    min = array[j]
+    for(let i=j; i < array.length; i++){
+      console.log(array[i], min)
+      // start from next value and compare
+      if(array[i] < min){
+        swapPosition = i
+        min = array[i]
+        array[swapPosition] = array[j]
+        array[j] = min
+      }
+      if(array[i] === min){
+        console.log("do nothing")
+      }
+    }
+    console.log("end of loop")
+  }
+  console.log(array)
+  return array
+}
+
+let array = [22, 120, 80, 8]
+
+selectionSort(array)
+// function bubbleSort2(array){ // less efficient
+//   let temp=0
+//   for(let j=0; j < array.length; j++ ){
+//     for(let i=0; i < array.length-1; i++){
+//       console.log(array)
+//       console.log("----------")
+//       temp = array[j]
+//       console.log(array[j], array[i])
+//       if(array[j] < array[i]){
+//         array[j] = array[i]
+//         array[i] = temp
+//       }
+//     }
+//   }
+//   console.log(array)
+//   return array;
 // }
