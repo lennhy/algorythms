@@ -927,9 +927,6 @@ function selectionSort(array){
         array[swapPosition] = array[j]
         array[j] = min
       }
-      if(array[i] === min){
-        console.log("do nothing")
-      }
     }
     console.log("end of loop")
   }
@@ -937,9 +934,27 @@ function selectionSort(array){
   return array
 }
 
-let array = [22, 120, 80, 8]
+let array = [300, 120, 80, 8, 2]
 
-selectionSort(array)
+// selectionSort(array)
+
+function insertionSort(arr){
+  let j=arr.length-1;
+  for(let i=1; i < arr.length; i++){
+    while( j > 0){
+      if(arr[i] < arr[j]){
+
+      }
+      j--
+    }
+  }
+  // start with the second value
+  // 1 compare value to first if it is less then put it infront if more leave
+  // keep going to left until value to left is less
+  // 2 next value compare to left of it repeat step 1
+  return arr;
+}
+
 // function bubbleSort2(array){ // less efficient
 //   let temp=0
 //   for(let j=0; j < array.length; j++ ){
@@ -957,3 +972,280 @@ selectionSort(array)
 //   console.log(array)
 //   return array;
 // }
+
+// var arr=[90, 43, 21, 9, 11]
+    // 43, 90, 21, 9, 11
+    // 43, 90, 90, 9, 11
+    // 43, 90, 21, 9, 11
+    // 43, 90, 21, 21, 11
+    // 43, 90, 9, 21, 11
+// function insertionSort(arr){
+//   var currVal;
+//   for(var i=1; i < arr.length; i++){
+//     console.log(arr)
+//     currVal = arr[i]
+//     console.log("here ^ ------------ v")
+//     for(var j=i-1; j>=0 && arr[j] > currVal; j--){
+//       // console.log(i)
+//       // console.log( arr[j])
+//       // console.log( currVal)
+//       arr[j+1] = arr[j]
+//     }
+//     console.log(arr)
+//     arr[j+1] = currVal
+//   }
+//   return arr
+// }
+
+// console.log(insertionSort(arr))
+
+// var arr1=[9, 20, 29, 90, 110]
+// var arr2=[1, 10, 40, 88]
+
+// function merge1(arr1, arr2){
+//   let i=0;
+//   let j=0;
+//   let results =[]
+//   while(i < arr1.length && j < arr2.length){
+//     if(arr2[j] > arr1[i]){
+//       results.push(arr1[i])
+//       i++
+//     }
+//     else{
+//       results.push(arr2[j])
+//       j++
+//     }
+//   }
+//   while(i < arr1.length){
+//     results.push(arr1[i])
+//     i++
+//
+//   }
+//   while(j < arr2.length){
+//     results.push(arr2[j])
+//     j++
+//
+//   }
+//   return results
+// }
+
+// function merge(arr1, arr2){
+//   let i=0;
+//   let j=0;
+//   let k=0;
+//   let results =[]
+//
+//     while(arr1.length && arr2.length){
+//       if(arr2[j] > arr1[i]){
+//         results.push(arr1.shift())
+//         i++
+//       }
+//       else{
+//         results.push(arr2.shift())
+//         j++
+//       }
+//     }
+//
+//     var lastValuesOfArray = arr1.length === 0 ? arr2 : arr1;
+//
+//     while(k < lastValuesOfArray.length){
+//       results.push(lastValuesOfArray[k])
+//       k++
+//     }
+//
+//   return results
+// }
+
+// function merge2(arr1, arr2){
+//   let i=0;
+//   let results =[]
+//   let lastValuesOfArray
+//   let longerlength = arr1.length > arr2.length ? arr1.length : arr2.length;
+//
+//     while(i < longerlength){
+//       if(arr1[i] !== undefined && arr2[i] !== undefined){
+//         if(arr2[i] > arr1[i]){
+//           results.push(arr1[i])
+//           i++
+//         }
+//         else{
+//           results.push(arr2[i])
+//           i++
+//         }
+//       }else{
+//           lastValuesOfArray = arr1.length === undefined ? arr2 : arr1;
+//           results.push(lastValuesOfArray[i])
+//           i++
+//       }
+//     }
+//   return results
+// }
+
+// let longerlength = arr1.length > arr2.length ? arr1.length : arr2.length;
+// var arr=[90, 200, 20, 9, 110, 33, 22 ]
+
+// function mergeSort(arr){
+//   if(arr.length <= 1){
+//     return arr
+//   }
+//   let mid = Math.floor(arr.length / 2)
+//   let left = mergeSort(arr.slice(0, mid))
+//   let right = mergeSort(arr.slice(mid))
+//   return merge1(left, right)
+// }
+// // console.log(mergeSort(arr))
+//
+// function recursion(arr){
+//   if (arr.length === 0){
+//     console.log("the end")
+//     return
+//   }
+//   console.log(arr)
+//   arr.shift()
+//   return recursion(arr)
+// }
+//
+// function sumRange(num){
+//   console.log(num)
+//   if (num === 1 ){
+//     return 1
+//   }
+//   return num + sumRange(num-1)
+// }
+//
+// var arr=[90, 200, 20, 9, 110, 33, 22 ]
+// // sumRange(30)
+
+
+
+// prime numbers factors
+function primeNumbers(number){
+  let primeNums = [2]
+  let isPrim = false;
+  let max =0;
+  // check if any other number below this number can divide into this number
+  // excluding 1 and itself or any number that is greater than prime number * 2
+  for(let i =1; i <= number; i++){
+    let divider = i-1
+
+    while( divider > 1){
+          if(i % divider !== 0){
+            isPrim = true;
+            // possibly a prime number move to the next loop step
+          }
+          if(i % divider === 0){
+            // break;
+            isPrim = false;
+            // Need this break statement or else the loop will keep going even after you find a unmber that can divide into it
+            break
+            // def not a prime number stop loop and move to parent loop
+          }
+        divider--
+      }
+      // Get only prime factors of n here
+      if(isPrim == true){
+        if(number % i === 0){
+          primeNums.push(i)
+        }
+      }
+    }
+    for(let i=0; i < primeNums.length; i++ ){
+        if(max < primeNums[i]){
+          max = primeNums[i]
+        }
+    }
+    // get hightest prime factor of n here
+    return max;
+
+
+  // let primeNum = 0;
+  // let isPrim = false;
+  // let max =0;
+  // // check if any other number below this number can divide into this number
+  // // excluding 1 and itself or any number that is greater than prime number * 2
+  // for(let i =2; i <= number; i++){
+  //   let divider = i-1
+  //   while( divider > 0){
+  //         if(i === 2){
+  //           isPrim = true;
+  //         }
+  //         // console.log(isPrim)
+  //
+  //         if(i % divider !== 0 && i !== 2){
+  //           isPrim = true;
+  //           // possibly a prime number move to the next loop step
+  //         }
+  //         if(i % divider === 0 && i !== 2){
+  //           // break;
+  //           isPrim = false;
+  //           // Need this break statement or else the loop will keep going even after you find a unmber that can divide into it
+  //           break
+  //           // def not a prime number stop loop and move to parent loop
+  //         }
+  //       divider--
+  //     }
+  //
+  //     // Get only prime factors of n here
+  //     if(isPrim ){
+  //       if(number % i === 0){
+  //         // get hightest prime factor of n here
+  //         if(primeNum < i){
+  //           primeNum = i
+  //         }
+  //       }
+  //     }
+  //   }
+  //   return primeNum;
+  }
+
+console.log(primeNumbers(2))
+// function primeFactors(n){
+//
+//   let arrOfPrimeNums = primeNumbers(n)
+//   for(let i = arrOfPrimeNums.length-1; i >= 0; i--){
+//     let lessThani = 0;
+//     while( lessThani < arrOfPrimeNums.length && arrOfPrimeNums[i] * arrOfPrimeNums[lessThani] > n){
+//       if(arrOfPrimeNums[i] * arrOfPrimeNums[lessThani] > n){
+//         arrOfPrimeNums.pop()
+//       }
+//       lessThani++
+//     }
+//   }
+//   for(let i = arrOfPrimeNums.length-1; i >= 0; i--){
+//     // Get the highest prime number that can divide eveny into n
+//     if(n % arrOfPrimeNums[i] === 0){
+//       return arrOfPrimeNums[i]
+//     }
+//   }
+//   return n;
+//
+// }
+// console.log(primeFactors(13195))
+
+// function highestPrimeFactor(n){
+//   for(let i=2; (i*2) <= n; i++){
+//     arr.push(i)
+//   }
+// }
+    // if(all numbers cannot divide into this number ){
+    //     primeNums.push(num)
+    // }
+    // i++
+
+  // for(let z = 2; z < n; z++){
+  //   let j=z-1;
+  //   while( j !== 0){
+  //     if(z % j !== 0){
+  //       j--
+  //     }
+  //     else{
+  //       // break;
+  //       j++
+  //     }
+  //
+  //   }
+  //
+  // }
+// }
+
+// console.log(merge1(arr1, arr2))
